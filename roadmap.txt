@@ -2,6 +2,7 @@ Bugs:
 - Range not working
 
 Plan:
+- add version number
 - Use the range() function instead
 - printout ranges for size options and galaxy
 - calculate and printout chance of finding a planet
