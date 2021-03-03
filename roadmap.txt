@@ -1,0 +1,19 @@
+Bugs:
+- Range not working
+
+Plan:
+- add version number
+- Use the range() function instead
+- printout ranges for size options and galaxy
+- calculate and printout chance of finding a planet
+- add more variables to search for
+	- gravity
+	- temperature
+	- goldiluck zone
+	- atmosphere
+-loading bar/text while searhcin to show progress
+-reverse search option, ie define numbers of planets to search and the reuslts will be how many planets are suitable
+- naming planets
+- list of planets that a suitable
+- GUI
+- Create planet graphics
