@@ -13,8 +13,8 @@ for planet in planets:
     print(f"Temperature: {planet[4]}c")
     print("-------------------------------")
 
-sizeMin = 100
-sizeMax = 1000
+PlanetsizeMin = 100
+PlanetsizeMax = 1000
 PlanetCounter = 0
 
 PlanetTimerStart = time.time()
@@ -23,11 +23,17 @@ while True:
     PlanetSize = random.randrange(1, 50000)
     PlanetCounter += 1
 
-    if sizeMin <= PlanetSize >= sizeMax:
-        print(f" Planet #{PlanetCounter} out of range - {PlanetSize}")
+    if PlanetSize in range(PlanetsizeMin, PlanetsizeMax):
+        PlanetSizeValid = True
     else:
-        print(f"Planet #{PlanetCounter} is just right! - {PlanetSize}")
+        PlanetSizeValid = False
+
+    if PlanetSizeValid:
+        print(f"Planet #{PlanetCounter} is good!")
         break
+    else:
+        print(f"Planet #{PlanetCounter} it not good...")
+
 
 PlanetTimerend = time.time()
 PlanetTimer = PlanetTimerend - PlanetTimerStart
