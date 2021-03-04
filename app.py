@@ -1,41 +1,52 @@
 import random
 import time
 
-planets = [["AD33", random.randrange(1, 10), random.randrange(100000, 1000000000), random.randrange(1, 99), random.randrange(-1000, 1000)]]
-
-print("-------------------------------")
-
-for planet in planets:
-    print(f"Name: {planet[0]}")
-    print(f"Size: {planet[1]}")
-    print(f"Distance from its sun: {planet[2]} t km")
-    print(f"CO2: {planet[3]}%")
-    print(f"Temperature: {planet[4]}c")
-    print("-------------------------------")
-
+#size
 PlanetsizeMin = 100
-PlanetsizeMax = 1000
+PlanetsizeMax = 500
 PlanetCounter = 0
+
+#temperature
+PlanetTempMin = 15
+PlanetTempMax = 100
 
 PlanetTimerStart = time.time()
 
 while True:
-    PlanetSize = random.randrange(1, 50000)
     PlanetCounter += 1
+    PlanetSizeValid = False
+    PlanetTempValid = False
 
+    PlanetSize = random.randrange(1, 50000)
     if PlanetSize in range(PlanetsizeMin, PlanetsizeMax):
         PlanetSizeValid = True
-    else:
-        PlanetSizeValid = False
 
-    if PlanetSizeValid:
+     
+    PlanetTemp = random.randrange(-5000, 5000)
+    if PlanetTemp in range(PlanetTempMin, PlanetTempMax):
+        PlanetTempValid = True
+
+
+    if PlanetSizeValid and PlanetTempValid:
         print(f"Planet #{PlanetCounter} is good!")
         break
-    else:
-        print(f"Planet #{PlanetCounter} it not good...")
+
 
 
 PlanetTimerend = time.time()
 PlanetTimer = PlanetTimerend - PlanetTimerStart
 
 print(PlanetTimer)
+
+print("-------------------------------")
+
+print(f"Name: XXXX")
+print(f"Size: {PlanetSize}")
+print(f"Distance from its sun: xx t km")
+print(f"CO2: xx%")
+print(f"Temperature: {PlanetTemp}c")
+print("-------------------------------")
+print(PlanetTempValid)
+
+
+

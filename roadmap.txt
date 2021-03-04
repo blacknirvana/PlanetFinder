@@ -3,7 +3,6 @@ Bugs:
 
 Plan:
 - add version number
-- Use the range() function instead
 - printout ranges for size options and galaxy
 - calculate and printout chance of finding a planet
 - add more variables to search for
@@ -17,3 +16,6 @@ Plan:
 - list of planets that a suitable
 - GUI
 - Create planet graphics
+
+0.1 Beta
+2021-03-02 0.1 Beta- Use the range() function instead
