@@ -2,13 +2,17 @@ import random
 import time
 
 #size
-PlanetsizeMin = 100
-PlanetsizeMax = 500
+PlanetsizeMin = 6000
+PlanetsizeMax = 7000
 PlanetCounter = 0
 
 #temperature
-PlanetTempMin = 15
-PlanetTempMax = 100
+PlanetTempMin = 10
+PlanetTempMax = 20
+
+#earth
+#size 6,371  km radius
+#16c average
 
 PlanetTimerStart = time.time()
 
@@ -17,12 +21,12 @@ while True:
     PlanetSizeValid = False
     PlanetTempValid = False
 
-    PlanetSize = random.randrange(1, 50000)
+    PlanetSize = random.randrange(2440, 24622)
     if PlanetSize in range(PlanetsizeMin, PlanetsizeMax):
         PlanetSizeValid = True
 
      
-    PlanetTemp = random.randrange(-5000, 5000)
+    PlanetTemp = random.randrange(-233, 430)
     if PlanetTemp in range(PlanetTempMin, PlanetTempMax):
         PlanetTempValid = True
 
@@ -41,7 +45,7 @@ print(PlanetTimer)
 print("-------------------------------")
 
 print(f"Name: XXXX")
-print(f"Size: {PlanetSize}")
+print(f"Size: {PlanetSize} km radius")
 print(f"Distance from its sun: xx t km")
 print(f"CO2: xx%")
 print(f"Temperature: {PlanetTemp}c")
